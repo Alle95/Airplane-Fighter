@@ -17,8 +17,8 @@ function createBoard() {
         board.push(row);
     }
     document.getElementById(planeId).className = 'plane'; 
-    setChangeCometPosition = setInterval(changeCometPosition, 1000);
     setCometPosition = setInterval(createRandomCometPosition, 2000);
+    setChangeCometPosition = setInterval(changeCometPosition, 1000);
     document.addEventListener("keyup", planeDirectionMove);
 }
 
