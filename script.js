@@ -40,14 +40,18 @@ function changeCometPosition() {
         newCometPosition = newCometPosition + 10;
         if (newCometPosition >= 99) {
             document.getElementById(cometList[i]).className = 'box';
-            cometList.splice(newCometPosition.toString());
+            newCometPosition = newCometPosition - 10;
+            let index = cometList.indexOf(newCometPosition.toString());
+            if(index >= 0) {
+                cometList.splice(index, 1);
+            }
         } else {
             document.getElementById(cometList[i]).className = 'box';
             document.getElementById(newCometPosition.toString()).className = 'comet';
             cometList[i] = newCometPosition.toString();
         }
         if(newCometPosition == newPlaneId) {
-            scoreText.innerHTML = 'Your score is ' + time + ' !';
+            scoreText.innerHTML = 'Your score is ' + time + ' points!';
             document.getElementById("reload").style.display = "block";
             clearInterval(setChangeCometPosition);
             clearInterval(setCometPosition);
