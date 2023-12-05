@@ -3,30 +3,31 @@
     grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
     grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
     justify-content: center;
-   }
-   .box {
+}
+
+.box {
     background-color: rgb(63, 139, 205);
     border: 2px;
-   }
-   .plane {
+}
+
+.plane {
     height: 50px;
     width: 50px;
     content: url("shapes.png");
     background-color: rgb(63, 139, 205);
 }
+
 .comet {
     height: 50px;
     width: 50px;
     content: url("comet.png");
     background-color: rgb(63, 139, 205);
 }
-.button-reload {
-    display: none;
-}
+
 #scoreText {
     text-align:center;
     font-size: 50px;
-  }
+}
 
 #reload {
     display: none;
